@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="btl.js"></script>
+    <title>Trang Giống Shopee</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            height: 70px;
+            width: 97%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .header li {
+            margin-right: 20px;
+        }
+
+        .header li:last-child {
+            margin-right: 0;
+        }
+
+        .header a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header a.shopee {
+            color: rgb(246, 68, 46);
+            font-size: 24px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .main {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: rgb(231,82,5);
+            padding-left: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-right: 0px;
+        }
+        .main1 {
+            width: 49%;
+            height: 100%;
+        }
+        .img1 {
+            width: 100%;
+            height: 350px;
+            float: right;
+            margin-top: 50px;
+            margin-right: 60px;
+        }
+        .img1 img {
+            width: 300px;
+            height: 350px;
+            float: right;
+        }
+        .p1 p {
+            transform: translateX(55%);
+            font-size: 20px;
+            color: white;
+        }
+        
+        .main2 {
+            width: 50%;
+            height: 100%;
+        }
+        .td1, .td2 {
+            width: 400px;
+            height: 480px;
+            transform: translate(20%,10%);
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            display: none; /* Hide both forms initially */
+        }
+        .td1 p, .td2 p {
+            margin-left: 28px;
+            font-size: 24px;
+            transform: translate(0,40%);
+        }
+        .td1 input, .td2 input {
+            border-radius: 3px;
+        }
+        .td1 ul li, .td2 ul li {
+            list-style-type: none;
+            display: inline-block;
+            font-size: 13px;
+            margin-right: 0px;
+            color: rgb(0,122,200);
+            margin-block-start: 0px;
+        }
+        .bor, .bor1 {
+            width: 150px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .bor p, .bor1 p {
+            text-align: center;
+            font-size: 17px;
+            transform: translate(-10%,-60%);
+            color: black;
+        }
+    </style>
+</head>
+<body style="padding: 0px;">
+<div class="header">
+    <ul>
+        <li><a class="shopee" href="#">Shopee</a></li>
+        <li><a href="#" id="register-link">Đăng Ký</a></li>
+    </ul>
+</div>
+<div class="main" style="padding: 0px;">
+    <div class="main1">
+        <div class="img1"><img src="logo-shopee-1.jpg" alt="" ></div>
+        <div class="p1">
+            <p>Nền tảng thương mại điện tử  </p>
+            <p>yêu thích ở Đông Nam Á & Đài Loan</p>
+        </div>
+    </div>
+    <div class="main2">
+        <div class="td1" id="login">
+            <p>Đăng nhập</p><br><br>
+            <input style="width: 320px;height: 30px; margin-left: 30px;" type="text" placeholder="Địa chỉ email hoặc số điện thoại"  id="username"><br><br><br>
+            <input style="width: 320px;height: 30px;  margin-left: 30px;" type="password" placeholder="Mật khẩu" id="password"><br><br><br>
+            <button  onclick="login()" style="width: 320px;height: 35px;  margin-left: 33px; background-color: rgb(238,77,45); color: white;" >Đăng nhập</button>
+            <p id="error-message" style="color: red; display: none;">Sai tên đăng nhập hoặc mật khẩu</p>
+            <ul>
+                <li style="margin-right: 103px; color: rgb(189,189,189); cursor: pointer;">
+                    Quên mật khẩu 
+                </li>
+                <li style="color: rgb(189,189,189); cursor: pointer;">
+                    Đăng nhập với SMS
+                </li>
+            </ul>
+            <ul>
+                <li><hr width="135px"></li>
+                <li>HOẶC</li>
+                <li><hr width="135px"></li>
+            </ul>
+            <ul>
+                <li class="bor" style="margin-right: 10px;" ><p>Facebook</p></li>
+                <li class="bor"><p>Google</p></li>
+            </ul>
+            <ul>
+                <li  style="margin-left: 40px; color: rgb(189,189,189);"> Bạn mới biết đến Shopee?</li>
+                <li style="color: rgb(231,82,5); font-size: 17px; cursor: pointer;"><a href="#" id="register-link2"> Đăng ký</a></li>
+            </ul>
+        </div>
+        <div class="td2" id="register">
+            <p>Đăng ký</p><br><br>
+            <input style="width: 320px;height: 30px; margin-left: 30px;" type="text" placeholder="Địa chỉ email hoặc số điện thoại" id="register-email"><br><br><br>
+            <input style="width: 320px;height: 30px; margin-left: 30px;" type="password" placeholder="Mật khẩu" id="register-password"><br><br><br>
+            <input style="width: 320px;height: 35px;  margin-left: 33px; background-color: rgb(238,77,45); color: white;" type="submit" value="Đăng ký" id="register-submit">
+            <ul>
+                <li><hr width="135px"></li>
+                <li>HOẶC</li>
+                <li><hr width="135px"></li>
+            </ul>
+            <ul>
+                <li class="bor1" style="margin-right: 10px;" ><p>Facebook</p></li>
+                <li class="bor1"><p>Google</p></li>
+            </ul>
+            <ul>
+                <li  style="margin-left: 40px; color: rgb(189,189,189);"> Bạn đã có tài khoản?</li>
+                <li style="color: rgb(231,82,5); font-size: 17px; cursor: pointer;"><a href="#" id="login-link"> Đăng nhập</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    // Initially show login form and hide register form
+    document.getElementById('login').style.display = 'block';
+    document.getElementById('register').style.display = 'none';
+
+    document.getElementById('register-link').addEventListener('click', function() {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('register').style.display = 'block';
+    });
+
+    document.getElementById('register-link2').addEventListener('click', function() {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('register').style.display = 'block';
+    });
+
+    document.getElementById('login-link').addEventListener('click', function() {
+        document.getElementById('register').style.display = 'none';
+        document.getElementById('login').style.display = 'block';
+    });
+
+    // Validate form inputs before submission
+    document.getElementById('register-submit').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent form submission
+
+        var email = document.getElementById('register-email').value;
+        var password = document.getElementById('register-password').value;
+
+        if (validateEmail(email) && validatePassword(password)) {
+            alert("Đăng ký thành công!");
+        } else {
+            alert("Vui lòng kiểm tra lại thông tin đăng ký!");
+        }
+    });
+
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    function validatePassword(password) {
+        // Password should be at least 6 characters long
+        return password.length >= 6;
+    }
+    function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Kiểm tra thông tin đăng nhập
+            if (username === 'long2811' && password === 'long2811') {
+                // Lưu thông tin đăng nhập vào localStorage
+                localStorage.setItem('loggedIn', 'true');
+                // Chuyển hướng đến trang chính
+                window.location.href = 'btl.html';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+</script>
+</body>
+</html>

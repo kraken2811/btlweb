@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Giống Shopee</title>
+    <link rel="stylesheet"  href="product.css">
+    
+    <script src= "jquery-3.7.1.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <div id="header" style="padding: 0px; margin: 0px; ">
+        <div class="header1" style="height: 30px;z-index: 200; margin: 0px;  ">
+            <div class="headerfloat">
+                <ul style=" border: none;padding-inline-start: 0; margin-block-start: 6px">
+                    <li style="margin-left: 160px;" title="Kênh người bán"> Kênh người bán</li>
+                    <li title="Trở thành người bán Shopee"> Trở thành người bán Shopee</li>
+                    <li title="Tải ứng dụng"> Tải ứng dụng</li>
+                    <li> Kết nối <a href="https://www.facebook.com/"><img height="14px", width="14px", style=" transform: translateY(-0%);" src="iconf.png" title="Kết nối Facebook"></a></li>
+                </ul>
+            </div>
+            <div class="headerrigh">
+                <ul style="border: none;padding-inline-start: 0; margin-block-start: 6px">
+                    <li style="margin-left: 160px;" > Thông Báo</li>
+                    <li> Hỗ Trợ</li>
+                    <li> Tiếng Việt</li>
+                    <li> Đăng Ký</li>
+                    <li> Đăng Nhập</li>
+                </ul>
+            </div>
+        </div>
+        <div id="header2" >
+            <div class="icon">
+                <p>Shopee</p>
+            </div>
+            <div class="find">
+                <img src="anh.png" class="search-icon" alt="Search Icon">
+                <input type="text" class="search-input" placeholder=""><br>
+                <ul>
+                    <li>Dép 0d</li>
+                    <li> Săn iPhone 14 Pro Max 1k</li>
+                    <li> Lovito</li>
+                    <li> Tai Nghe BlueTooth</li>
+                    <li> Điện Thoại 1K</li>
+                    <li> Áo Thun Local Brand</li>
+                    <li> Son</li>
+                    <li> Tủ Quần Áo</li>
+                    <li> Chiếu Điều Hòa</li>
+                </ul>
+            </div>
+            <div class="gio">
+                <img width="35px", height="35px" src="giohang.png" class="cart-icon" onclick="toggleCart()">
+            </div>
+            <div class="cart" id="cart">
+                <h2>Giỏ hàng</h2>
+                <ul id="cart-items">
+                    <!-- Items will be added here dynamically -->
+                </ul>
+                <p class="cart-total"><span id="cart-total">0</span> Sp đã thêm</p>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="main1">
+            <div class="produc1">
+                <div class="large-image-container">
+                    <img id="large-image" src="project3.jpg" alt="Large Image">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="project3.jpg" alt="Thumbnail 1" onmouseover="showImage(this)">
+                    <img src="den1.jpg" alt="Thumbnail 2" onmouseover="showImage(this)">
+                    <img src="den2.jpg" alt="Thumbnail 3" onmouseover="showImage(this)">
+                    <img src="den3.jpg" alt="Thumbnail 4" onmouseover="showImage(this)">
+                </div>
+            </div>
+            <div class="produc2">
+                <p>【HCM 24H】Đèn flash âm thanh cảm ứng âm nhạc LED RGB 32 đèn LED 16 triệu màu thông minh cảm biến âm thanh trang trí</p>
+                <ul class="produc2ul">
+                    <li><span style="font-size: 20px; color:#F26C2D"><u>5</u></span><img width="15px" height="15px" src="sao.png"><img width="15px" height="15px" src="sao.png"><img width="15px" height="15px" src="sao.png"><img width="15px" height="15px" src="sao.png"><img width="15px" height="15px" src="sao.png"></li>
+                   
+                    <li><span style="font-size: 20px; margin-left: 20px;"><u>3,8k</u></span><span style="font-size: 18px;color:rgb(131,125,118);margin-left: 5px; ">Đánh Giá</span></li>
+                    <li><span style="font-size: 20px;margin-left: 20px;">11,8k</span><span style="font-size: 18px; color:rgb(131,125,118);margin-left: 5px;">Đã Bán</span></li>
+                </ul>
+                <span style="text-decoration: line-through;font-size: 20px; margin-left: 50px;">80.000đ</span>
+				<span style="font-size: 30px; color: rgb(238,77,45); margin-left: 10px;">45.000</span><br><br>
+                <span style="font-size: 17px; margin-left: 20px;">Chính Sách Trả Hàng</span>
+                <span style="font-size: 17px; margin-left: 20px;"><img width="15px" height="15px" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/b69402e4275f823f7d47.svg">Trả hàng 15 ngày</span>
+                <span style="font-size: 17px; margin-left: 20px; color: rgb(117,117,117);"> Đổi ý miễn phí<img width="15px" height="15px" style="margin-left: 10px;" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/be6f27f93268c0f88ded.svg"></span> <br><br>
+                <span style="margin-left: 50px;">Vận Chuyển</span>
+                <span style="margin-left: 20px;">Miễn phí vận chuyển</span><br>
+                <span style="margin-left: 155px; ">Vận chuyển tới</span>
+                <span style="margin-left: 15px;">Xã Dạ Trạch, Huyện Khoái Châu</span><br> 
+                <span style="margin-left: 155px;">Phí Vận Chuyển</span>
+                <span style="margin-left: 10px;">0đ - 28.350đ</span><br><br>
+                <span style="margin-left: 50px;">Màu sắc</span>
+               
+                <button onclick="handleClick(this)" style="width: 170px; height: 25px; margin-left: 20px; padding-inline-start: 0px" ><img width="25px" height="20px" style="transform: translateX(-10%);" src="den1.jpg" alt="den1" onclick="showImageByIndex(0)">Đen</button>
+                <button  onclick="handleClick(this)"style="width: 170px; height: 25px; margin-left: 20px; padding-inline-start: 0px" ><img width="25px" height="20px" style="transform: translateX(-10%);" src="den2.jpg" alt="Image 2 Button" onclick="showImageByIndex(1)">Trắng</button>
+                <button onclick="handleClick(this)" style="width: 170px; height: 25px; margin-left: 20px; padding-inline-start: 0px" ><img width="25px" height="20px" style="transform: translateX(-10%);" src="den3.jpg" alt="Image 3 Button" onclick="showImageByIndex(2)">Đèn chống muỗi</button><br><br><br><br>
+                <span style="font-size: 18px; margin-left: 50px">Số luong</span>
+                <button id="decrease-quantity" onclick="changeQuantity(-1)">-</button>
+                <input id="quantity" type="text" value="1" style="text-align: center; width: 40px; margin-left: 10px; margin-right: 10px;">
+                <button id="increase-quantity" onclick="changeQuantity(1)">+</button>
+                <span style="margin-left: 10px; color:rgb(117,117,139)">16002 sản phẩm có sẵn</span><br><br><br>
+                <button onclick="addToCart('【HCM 24H】Đèn flash âm thanh cảm ứng âm nhạc LED RGB 32 đèn LED 16 triệu màu thông minh cảm biến âm thanh trang trí', 45000)" style="width: 160px;height: 40px; border: 1px solid black; margin-left: 50px;background-color: rgb(255,238,232); color:rgb(238,77,51) ;">Thêm Vào Giỏ Hàng</button>
+                <button style="width: 120px;height: 40px; border: solid 1px black; background-color: rgb(238,77,45); color: rgb(248,227,255); margin-left: 20px">Mua Ngay</button>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="td1">
+                <div class="td2">
+                    <p>CHI TIẾT SẢN PHẨM</p>
+                </div>
+                <div class="td3">
+                    <span style="margin-left: 60px;"> Danh Mục</span>
+                    <span><span style="margin-left: 90px; color:rgb(49,163,219) ;">Shopee</span>><span style="color:rgb(49,163,219) ;">Nhà Cửa & Đời Sống</span>><span style="color:rgb(49,163,219) ;">Đèn</span>/<span style="color:rgb(49,163,219) ;">Khác</span></span><br>
+                    <span style="margin-left: 60px;"> Loại Đèn</span>
+                    <span style="margin-left: 80px;"> Khác</span><br>
+                    <span style="margin-left: 60px;"> Thiết bị thông minh</span>
+                    <span style="margin-left: 50px;"> Có</span><br>
+                    <span style="margin-left: 60px;">Số lượng hàng kkh...</span>
+                    <span style="margin-left: 35px;"> 30</span><br>
+                    <span style="margin-left: 60px;"> Số sản phẩm còn lại</span>
+                    <span style="margin-left: 35px;">1772</span><br>
+                    <span style="margin-left: 60px;"> Gửi từ</span>
+                    <span style="margin-left: 120px;"> TP.Hồ Chí Minh</span><br>
+                </div>
+            </div>
+            <div class="td4">
+                <p>MÔ TẢ SẢN PHẨM</p>
+                ✨Chào mừng bạn đến với Kammy Official Flagship Store✨<br><br>
+✅100% chính hãng ✅100% vận chuyển từ TP.HCM ✅ Đảm bảo 100% sau bán<br>
+🎈Chúng tôi là thương nhân địa phương tại TP.HCM<br>
+🎁Chúc các bạn quan tâm và chia sẻ 🎁Cửa hàng có các chương trình giảm giá lớn tùy từng thời điểm<br>
+⏰ Giờ làm việc của chúng tôi: 9:00 sáng đến 7:00 tối (Chúng tôi có thể không trả lời tin nhắn kịp thời vào cuối tuần)Đèn nháy theo nhạc Led RGB cảm ứng âm thanh<br><br>
+
+Một số lưu ý khi sử dụng thanh đèn led nháy theo nhạc:<br><br>
+
+- Đối với phân loại có pin dự phòng cấn ấn giữ nút Pow 3-5s để bật tắt sản phẩm<br>
+- Hạn chế dùng sạc nhanh để cấp nguồn cho sản phẩm vì công suất W đầu ra của sạc nhanh cao hơn công suất tiêu thụ của sản phẩm<br><br>
+ Thông số kỹ thuật của đèn nháy theo nhạc<br>
+- Thu tín hiệu: đầu micrô<br>
+- Chế độ hiển thị: 9<br>
+- Kết hợp màu hiển thị: 18 chế độ<br>
+- Các mục có thể điều chỉnh: độ nhạy / tốc độ / độ sáng / màu sắc / chế độ, v.v.<br>
+- Điện áp làm việc: DC 5V (≥1A)<br>
+- Công suất tiêu thụ: 5W<br>
+- Giao diện nguồn: Micro-USB type-C<br>
+- Chất liệu: Nhựa ABS  (Bền Chịu Va Đập Cao)<br>
+- Phần mềm được hỗ trợ: lọc tiếng ồn xung quanh / cập nhật chương trình cơ sở<br>
+- Kích thước: 18 * 1.8 * 1.5 cm<br>
+- Khối lượng tịnh: 86g<br>
+- Có 2 phiên bản là cắm trực tiếp và có pin dự phòng :  Kèm cáp sạc USB type C<br>
+            </div>
+        </div>
+    </div>
+    <script>
+        function increaseAmount(id) {
+        var a = document.getElementById(id).value;
+        document.getElementById(id).value = Number(a) + 1;
+    }
+
+    function descreaseAmount(id) {
+        var a = document.getElementById(id).value;
+        if (Number(a) > 1) {
+            document.getElementById(id).value = Number(a) - 1;
+        }
+    }
+    let cart = [];
+        let total = 0;
+
+        function showImage(element) {
+            var largeImage = document.getElementById("large-image");
+            largeImage.src = element.src;
+        }
+
+        function toggleCart() {
+            var cartDiv = document.getElementById("cart");
+            cartDiv.style.display = cartDiv.style.display === "block" ? "none" : "block";
+        }
+
+        function changeQuantity(amount) {
+            var quantityInput = document.getElementById("quantity");
+            var currentQuantity = parseInt(quantityInput.value);
+            var newQuantity = currentQuantity + amount;
+            if (newQuantity >= 1) {
+                quantityInput.value = newQuantity;
+            }
+        }
+
+        function addToCart(productName, productPrice) {
+            var quantityInput = document.getElementById("quantity");
+            var quantity = parseInt(quantityInput.value);
+
+            var maxLength = 20;
+            if (productName.length > maxLength) {
+                productName = productName.substring(0, maxLength) + '...';
+            }
+
+            var cartItem = {
+                name: productName,
+                price: productPrice,
+                quantity: quantity
+            };
+
+            cart.unshift(cartItem);
+            total += productPrice * quantity;
+
+            saveCartToLocalStorage();
+            renderCart();
+        }
+
+        function removeFromCart(index) {
+            total -= cart[index].price * cart[index].quantity;
+            cart.splice(index, 1);
+
+            saveCartToLocalStorage();
+            renderCart();
+        }
+
+        function saveCartToLocalStorage() {
+            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("total", total);
+        }
+
+        function loadCartFromLocalStorage() {
+            var savedCart = localStorage.getItem("cart");
+            var savedTotal = localStorage.getItem("total");
+
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+            }
+
+            if (savedTotal) {
+                total = parseInt(savedTotal);
+            }
+
+            renderCart();
+        }
+
+        function renderCart() {
+            var cartItems = document.getElementById("cart-items");
+            var cartTotal = document.getElementById("cart-total");
+
+            cartItems.innerHTML = "";
+
+            // Giới hạn số sản phẩm hiển thị
+            var maxItemsToShow = 5; // Số sản phẩm tối đa hiển thị
+            for (var i = 0; i < cart.length && i < maxItemsToShow; i++) {
+                var item = cart[i];
+                var newItem = document.createElement("li");
+                newItem.innerHTML = `${item.name} x ${item.quantity} - ${item.price * item.quantity} VND <button class="remove-btn" onclick="removeFromCart(${i})">Xóa</button>`;
+                cartItems.appendChild(newItem);
+            }
+
+            if (cart.length > maxItemsToShow) {
+                var hiddenItemCount = cart.length - maxItemsToShow;
+                var hiddenItemsMessage = document.createElement("li");
+               
+                cartItems.appendChild(hiddenItemsMessage);
+            }
+
+            cartTotal.textContent = cart.length;
+        }
+
+        window.onload = function() {
+            loadCartFromLocalStorage();
+        };
+            function handleClick(button) {
+            // Kiểm tra nếu button đã có lớp 'clicked'
+            if (button.classList.contains('clicked')) {
+                // Nếu đã có, loại bỏ lớp 'clicked'
+                button.classList.remove('clicked');
+                // Ẩn dấu tích
+            }
+         else {
+                // Nếu chưa có, thêm lớp 'clicked'
+                button.classList.add('clicked');
+         }
+        }
+    const images = ['giay1.png', 'giay2.png', 'giay3.png', 'giay4.png'];
+
+        function showImage(index) {
+            document.getElementById('large-image').src = images[index];
+        }
+    function showImage(img) {
+            var largeImage = document.getElementById('large-image');
+            largeImage.src = img.src;
+        }
+        
+    </script>
+</body>
+</html>

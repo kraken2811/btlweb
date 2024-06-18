@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Giống Shopee</title>
+    <link rel="stylesheet"  href="product.css">
+    <script src= "jquery-3.7.1.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    
+    <div id="header" style="padding: 0px; margin: 0px; ">
+        <div class="header1" style="height: 30px;z-index: 200; margin: 0px;  ">
+            <div class="headerfloat">
+                <ul style=" border: none;padding-inline-start: 0; margin-block-start: 6px">
+                    <li style="margin-left: 160px;" title="Kênh người bán"> Kênh người bán</li>
+                    <li title="Trở thành người bán Shopee"> Trở thành người bán Shopee</li>
+                    <li title="Tải ứng dụng"> Tải ứng dụng</li>
+                    <li> Kết nối <a href="https://www.facebook.com/"><img height="14px", width="14px", style=" transform: translateY(-0%);" src="iconf.png" title="Kết nối Facebook"></a></li>
+                </ul>
+            </div>
+            <div class="headerrigh">
+                <ul style="border: none;padding-inline-start: 0; margin-block-start: 6px">
+                    <li style="margin-left: 160px;" > Thông Báo</li>
+                    <li> Hỗ Trợ</li>
+                    <li> Tiếng Việt</li>
+                    <li> Đăng Ký</li>
+                    <li> Đăng Nhập</li>
+                </ul>
+            </div>
+        </div>
+        <div id="header2" >
+            <div class="icon">
+                <p>Shopee</p>
+            </div>
+            <div class="find">
+                <img src="anh.png" class="search-icon" alt="Search Icon">
+                <input type="text" class="search-input" placeholder=""><br>
+                <ul>
+                    <li>Dép 0d</li>
+                    <li> Săn iPhone 14 Pro Max 1k</li>
+                    <li> Lovito</li>
+                    <li> Tai Nghe BlueTooth</li>
+                    <li> Điện Thoại 1K</li>
+                    <li> Áo Thun Local Brand</li>
+                    <li> Son</li>
+                    <li> Tủ Quần Áo</li>
+                    <li> Chiếu Điều Hòa</li>
+                </ul>
+            </div>
+            <div class="gio">
+                <img width="35px", height="35px" src="giohang.png" class="cart-icon" onclick="toggleCart()">
+                
+            </div>
+            <div class="cart" id="cart">
+                <h2>Giỏ hàng</h2>
+                <ul id="cart-items">
+                    <!-- Items will be added here dynamically -->
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="product1"></div>
+        <div class="main1">
+            <div class="produc1">
+                <div class="large-image-container">
+                    <img id="large-image" src="giay1.png" alt="Large Image">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="giay2.png" alt="Thumbnail 1" onmouseover="showImage(this)">
+                    <img src="giay3.png" alt="Thumbnail 2" onmouseover="showImage(this)">
+                    <img src="giay4.png" alt="Thumbnail 3" onmouseover="showImage(this)">
+                    <img src="giay1.png" alt="Thumbnail 4" onmouseover="showImage(this)">
+                </div>
+            </div>
+            <div class="produc2">
+                <p>[free ship] Giày Nike_AF1 Lông Chuột,Giày Thể Thao AF1 Màu Lông Chuột Bả Trung Da Lộn Đé Air Kiểu Dáng BaSic.[Hot]</p>
+                <ul class="produc2ul">
+                    <li><span style="font-size: 20px; color:#F26C2D"><u>5</u></span><img width="15px" height="15px" src="sao.png"><img width="15px" height="15px" src="sao.png"><img width="15px" height="15px" src="sao.png"><img width="15px" height="15px" src="sao.png"><img width="15px" height="15px" src="sao.png"></li>
+                   
+                    <li><span style="font-size: 20px; margin-left: 20px;"><u>370</u></span><span style="font-size: 18px;color:rgb(131,125,118);margin-left: 5px; ">Đánh Giá</span></li>
+                    <li><span style="font-size: 20px;margin-left: 20px;">5,5k</span><span style="font-size: 18px; color:rgb(131,125,118);margin-left: 5px;">Đã Bán</span></li>
+                </ul>
+                <span style="text-decoration: line-through;font-size: 20px; margin-left: 50px;">260.000đ</span>
+				<span style="font-size: 30px; color: rgb(238,77,45); margin-left: 10px;">150.000</span><br><br>
+                <span style="font-size: 17px; margin-left: 20px;">Chính Sách Trả Hàng</span>
+                <span style="font-size: 17px; margin-left: 20px;"><img width="15px" height="15px" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/b69402e4275f823f7d47.svg">Trả hàng 15 ngày</span>
+                <span style="font-size: 17px; margin-left: 20px; color: rgb(117,117,117);"> Đổi ý miễn phí<img width="15px" height="15px" style="margin-left: 10px;" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/be6f27f93268c0f88ded.svg"></span> <br><br>
+                <span style="margin-left: 50px;">Vận Chuyển</span>
+                <span style="margin-left: 20px;">Miễn phí vận chuyển</span><br>
+                <span style="margin-left: 155px; ">Vận chuyển tới</span>
+                <span style="margin-left: 15px;">Xã Dạ Trạch, Huyện Khoái Châu</span><br> 
+                <span style="margin-left: 155px;">Phí Vận Chuyển</span>
+                <span style="margin-left: 10px;">0đ - 28.350đ</span><br><br>
+                <span style="margin-left: 50px;">Màu sắc</span>
+               
+                <button onclick="handleClick(this)" style="width: 170px; height: 25px; margin-left: 20px; padding-inline-start: 0px" ><img width="25px" height="20px" style="transform: translateX(-10%);" src="giay1.png" alt="Image 1 Button" onclick="showImageByIndex(0)">AF1 Xám Lông Chuột</button>
+                <button  onclick="handleClick(this)"style="width: 170px; height: 25px; margin-left: 20px; padding-inline-start: 0px" ><img width="25px" height="20px" style="transform: translateX(-10%);" src="giay1.png" alt="Image 2 Button" onclick="showImageByIndex(1)">AF1 Xám Lông Chuột</button>
+                <button onclick="handleClick(this)" style="width: 170px; height: 25px; margin-left: 20px; padding-inline-start: 0px" ><img width="25px" height="20px" style="transform: translateX(-10%);" src="giay1.png" alt="Image 3 Button" onclick="showImageByIndex(2)">AF1 Xám Lông Chuột</button>
+                <button onclick="handleClick(this)" style="width: 170px; height: 25px; margin-left: 130px; margin-top: 10px; padding-inline-start: 0px" ><img width="25px" height="20px" style="transform: translateX(-10%);" src="giay1.png" alt="Image 4 Button" onclick="showImageByIndex(3)">AF1 Xám Lông Chuột</button><br><br>
+
+                
+                <span style="margin-left: 50px;">Size</span>
+                <button style="width: 70px; height: 25px; margin-left: 50px; text-align: center;" onclick="handleClick(this)"> 36</button>
+                <button style="width: 70px; height: 25px; margin-left: 20px;" onclick="handleClick(this)">37</button>
+                <button style="width: 70px; height: 25px; margin-left: 20px;" onclick="handleClick(this)">38</button>
+                <button style="width: 70px; height: 25px; margin-left: 20px;" onclick="handleClick(this)">39</button>
+                <button style="width: 70px; height: 25px; margin-left: 20px;" onclick="handleClick(this)">40</button>
+                <button style="width: 70px; height: 25px; margin-left: 20px;" onclick="handleClick(this)">41</button>
+                <button style="width: 70px; height: 25px; margin-left: 130px; margin-top: 10px">42</button><br><br><br>
+                <span style="font-size: 18px; margin-left: 50px">Số luong</span>
+                <button id="decrease-quantity" onclick="changeQuantity(-1)">-</button>
+                <input id="quantity" type="text" value="1" style="text-align: center; width: 40px; margin-left: 10px; margin-right: 10px;">
+                <button id="increase-quantity" onclick="changeQuantity(1)">+</button>
+                <span style="margin-left: 10px; color:rgb(117,117,139)">2800 sản phẩm có sẵn</span><br><br><br>
+                <button onclick="addToCart('[free ship] Giày Nike_AF1 Lông Chuột,Giày Thể Thao AF1 Màu Lông Chuột Bả Trung Da Lộn Đé Air Kiểu Dáng BaSic.[Hot]', 150000)"  style="width: 160px;height: 40px; border: 1px solid black; margin-left: 50px;background-color: rgb(255,238,232); color:rgb(238,77,51) ;" >Thêm Vào Giỏ Hàng</button>
+                <button style="width: 120px;height: 40px; border: solid 1px black; background-color: rgb(238,77,45); color: rgb(248,227,255); margin-left: 20px">Mua Ngay</button>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="td1">
+                <div class="td2">
+                    <p>CHI TIẾT SẢN PHẨM</p>
+                </div>
+                <div class="td3">
+                    <span style="margin-left: 60px;"> Danh Mục</span>
+                    <span><span style="margin-left: 90px; color:rgb(49,163,219) ;">Shopee</span>><span style="color:rgb(49,163,219) ;">Giày Dép Nam</span>><span style="color:rgb(49,163,219) ;">Giày Thể Thao</span>/<span style="color:rgb(49,163,219) ;">Sneakers</span></span><br>
+                    <span style="margin-left: 60px;"> Tình Trạng</span>
+                    <span style="margin-left: 90px;"> Đã Sử Dụng</span><br>
+                    <span style="margin-left: 60px;"> Da ngoài</span>
+                    <span style="margin-left: 103px;"> Mở</span><br>
+                    <span style="margin-left: 60px;">Xuất xứ</span>
+                    <span style="margin-left: 107px;"> Việt Nam</span><br>
+                    <span style="margin-left: 60px;"> Dịp</span>
+                    <span style="margin-left: 137px;">Thể thao</span><br>
+                    <span style="margin-left: 60px;"> Chiều cao cổ giày</span>
+                    <span style="margin-left: 47px;"> Cổ thấp</span><br>
+                    <span style="margin-left: 60px;"> Số lượng hàng kho</span>
+                    <span style="margin-left: 42px;"> 2800</span><br>
+                    <span style="margin-left: 60px;"> Số sản phẩm còn lại</span>
+                    <span style="margin-left: 33px;"> 541854</span><br>
+                    <span style="margin-left: 60px;"> Gửi từ</span>
+                    <span style="margin-left: 120px;"> Hải Dương</span><br>
+                </div>
+            </div>
+            <div class="td4">
+                <p>MÔ TẢ SẢN PHẨM</p>
+                CẢM ƠN CÁC BẠN ĐÃ ĐỌC !<br>
+                                              kính chào quý khách<br>
+Đây là cửa hàng bên mình mới mở, rất mong được sự ủng hộ của các bạn.<br>
+✈ NowShip ,GrabExpress hỏa tốc 24/7, 1h nội thành Hà Nội.<br>
+-------- <br>
+ Size : 36 37 38 39 40 41 42 43<br>
+𝙏𝙝𝙤̂𝙣𝙜 𝙩𝙞𝙣 𝙨𝙖̉𝙣 𝙥𝙝𝙖̂̉𝙢:<br>
+- Tất cả các sản phẩm bên mình đều đc tặng tất và box.bảo vệ.<br>
+- Chất lượng tốt nhất trong tầm giá<br>
+- Form đẹp chuẩn :  Màu sắc giống đến 95 °/ₒ ; <br>
+-  Chất liệu da  + da lộn + vải mesh <br>
+-  Logo M.ông in dập chìm.<br>
+-  Lưỡi gà cao dày dặn; swoosh sắc nét; Mông mũi làm đẹp<br>
+-  Đế 2 lớp khâu chỉ đều<br>
+-  Full box + accessories<br>
+•  Mẫu này bạn mang đúng hoặc up 1 size đối với chân bè<br>
+ ••••••••••••••••••••••••••••••• .<br>
+- Giao hàng đúng size, lỗi 1 đổi 1.<br>
+- Giao hàng trên toàn quốc theo hình thức COD, ví Airpay, internet banking,...<br><br>
+
+✅Bao kiểm tra hàng trước thanh toán (Gọi cho shop theo hotline nếu bưu tá không cho kiểm)<br>
+✅Hỗ trợ đổi size nếu khách đặt nhầm size giày, lỗi nhà sản xuất<br>
+✅ Tất cả các sản phẩm đã được chọn lựa kỹ trước khi cung cấp cho khách hàng <br>
+✅ Sản phẩm bao gồm đầy đủ : hộp, tag, giấy gói và phụ kiện.<br>
+✅Hãy LIÊN HỆ VỚI CHÚNG TÔI. Chúng tôi sẽ tận tình giúp bạn giải quyết các vấn đề về thông tin sản phẩm và những thông tin khác <br>
+❌ XIN đừng vội đánh giá 1 sao hãy LIÊN HỆ với SHOP qua kênh chat hoặc liên hệ qua số hotline trên đơn hàng, chúng tôi CAM KẾT phục vụ quý khách đến khi HÀI LÒNG 24/7<br>
+            </div>
+        </div>
+    </div>
+    <script>
+       let cart = [];
+        let total = 0;
+
+        function showImage(element) {
+            var largeImage = document.getElementById("large-image");
+            largeImage.src = element.src;
+        }
+
+        function toggleCart() {
+            var cartDiv = document.getElementById("cart");
+            cartDiv.style.display = cartDiv.style.display === "block" ? "none" : "block";
+        }
+
+        function changeQuantity(amount) {
+            var quantityInput = document.getElementById("quantity");
+            var currentQuantity = parseInt(quantityInput.value);
+            var newQuantity = currentQuantity + amount;
+            if (newQuantity >= 1) {
+                quantityInput.value = newQuantity;
+            }
+        }
+
+        function addToCart(productName, productPrice) {
+            var quantityInput = document.getElementById("quantity");
+            var quantity = parseInt(quantityInput.value);
+
+            var maxLength = 20;
+            if (productName.length > maxLength) {
+                productName = productName.substring(0, maxLength) + '...';
+            }
+
+            var cartItem = {
+                name: productName,
+                price: productPrice,
+                quantity: quantity
+            };
+
+            cart.unshift(cartItem);
+            total += productPrice * quantity;
+
+            saveCartToLocalStorage();
+            renderCart();
+        }
+
+        function removeFromCart(index) {
+            total -= cart[index].price * cart[index].quantity;
+            cart.splice(index, 1);
+
+            saveCartToLocalStorage();
+            renderCart();
+        }
+
+        function saveCartToLocalStorage() {
+            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("total", total);
+        }
+
+        function loadCartFromLocalStorage() {
+            var savedCart = localStorage.getItem("cart");
+            var savedTotal = localStorage.getItem("total");
+
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+            }
+
+            if (savedTotal) {
+                total = parseInt(savedTotal);
+            }
+
+            renderCart();
+        }
+
+        function renderCart() {
+            var cartItems = document.getElementById("cart-items");
+            var cartTotal = document.getElementById("cart-total");
+
+            cartItems.innerHTML = "";
+
+            // Giới hạn số sản phẩm hiển thị
+            var maxItemsToShow = 5; // Số sản phẩm tối đa hiển thị
+            for (var i = 0; i < cart.length && i < maxItemsToShow; i++) {
+                var item = cart[i];
+                var newItem = document.createElement("li");
+                newItem.innerHTML = `${item.name} x ${item.quantity} - ${item.price * item.quantity} VND <button class="remove-btn" onclick="removeFromCart(${i})">Xóa</button>`;
+                cartItems.appendChild(newItem);
+            }
+
+            if (cart.length > maxItemsToShow) {
+                var hiddenItemCount = cart.length - maxItemsToShow;
+                var hiddenItemsMessage = document.createElement("li");
+               
+                cartItems.appendChild(hiddenItemsMessage);
+            }
+
+            cartTotal.textContent = cart.length+ " VND";
+        }
+
+        window.onload = function() {
+            loadCartFromLocalStorage();
+        };
+// Example Usage
+// addToCart('Product A', 20000, 2);
+// addToCart('Product B', 15000, 1);
+
+function handleClick(button) {
+        // Kiểm tra nếu button đã có lớp 'clicked'
+        if (button.classList.contains('clicked')) {
+            // Nếu đã có, loại bỏ lớp 'clicked'
+            button.classList.remove('clicked');
+            // Ẩn dấu tích
+        }
+     else {
+            // Nếu chưa có, thêm lớp 'clicked'
+            button.classList.add('clicked');
+     }
+    }
+const imagess = ['giay1.png', 'giay2.png', 'giay3.png', 'giay4.png'];
+
+    function showImage(index) {
+        document.getElementById('large-image').src = imagess[index];
+    }
+function showImage(img) {
+        var largeImage = document.getElementById('large-image');
+        largeImage.src = img.src;
+}
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

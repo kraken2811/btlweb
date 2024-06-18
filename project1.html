@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .product button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #218838;
+        }
+
+        .cart-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .cart {
+            display: none;
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background-color: #5f3a3a;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 300px; /* Chiều rộng cố định của giỏ hàng */
+            max-height: 400px; /* Giới hạn chiều cao của giỏ hàng */
+            overflow-y: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá chiều cao */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            color: black;
+            animation: slide-in 0.3s ease forwards; /* Hiệu ứng hiển thị */
+        }
+
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cart h2 {
+            margin-top: 0;
+        }
+
+        .cart ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 10px; /* Để tránh nút xóa bị dính vào phần tổng cộng */
+        }
+
+        .cart li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .remove-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .remove-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="Cart" class="cart-icon" onclick="toggleCart()">
+
+    <div class="cart" id="cart">
+        <h2>Giỏ hàng</h2>
+        <ul id="cart-items">
+            <!-- Items will be added here dynamically -->
+        </ul>
+        <p class="cart-total">Tổng: <span id="cart-total">0</span> VND</p>
+    </div>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function showImage(element) {
+            var largeImage = document.getElementById("large-image");
+            largeImage.src = element.src;
+        }
+
+        function toggleCart() {
+            var cartDiv = document.getElementById("cart");
+            cartDiv.style.display = cartDiv.style.display === "block" ? "none" : "block";
+        }
+
+        function changeQuantity(amount) {
+            var quantityInput = document.getElementById("quantity");
+            var currentQuantity = parseInt(quantityInput.value);
+            var newQuantity = currentQuantity + amount;
+            if (newQuantity >= 1) {
+                quantityInput.value = newQuantity;
+            }
+        }
+
+        function addToCart(productName, productPrice) {
+            var quantityInput = document.getElementById("quantity");
+            var quantity = parseInt(quantityInput.value);
+
+            var maxLength = 20;
+            if (productName.length > maxLength) {
+                productName = productName.substring(0, maxLength) + '...';
+            }
+
+            var cartItem = {
+                name: productName,
+                price: productPrice,
+                quantity: quantity
+            };
+
+            cart.push(cartItem);
+            total += productPrice * quantity;
+
+            saveCartToLocalStorage();
+            renderCart();
+        }
+
+        function removeFromCart(index) {
+            total -= cart[index].price * cart[index].quantity;
+            cart.splice(index, 1);
+
+            saveCartToLocalStorage();
+            renderCart();
+        }
+
+        function saveCartToLocalStorage() {
+            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("total", total);
+        }
+
+        function loadCartFromLocalStorage() {
+            var savedCart = localStorage.getItem("cart");
+            var savedTotal = localStorage.getItem("total");
+
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+            }
+
+            if (savedTotal) {
+                total = parseInt(savedTotal);
+            }
+
+            renderCart();
+        }
+
+        function renderCart() {
+            var cartItems = document.getElementById("cart-items");
+            var cartTotal = document.getElementById("cart-total");
+
+            cartItems.innerHTML = "";
+
+            // Giới hạn số sản phẩm hiển thị
+            var maxItemsToShow = 5; // Số sản phẩm tối đa hiển thị
+            for (var i = 0; i < cart.length && i < maxItemsToShow; i++) {
+                var item = cart[i];
+                var newItem = document.createElement("li");
+                newItem.innerHTML = `${item.name} x ${item.quantity} - ${item.price * item.quantity} VND <button class="remove-btn" onclick="removeFromCart(${i})">Xóa</button>`;
+                cartItems.appendChild(newItem);
+            }
+
+            if (cart.length > maxItemsToShow) {
+                var hiddenItemCount = cart.length - maxItemsToShow;
+                var hiddenItemsMessage = document.createElement("li");
+               
+                cartItems.appendChild(hiddenItemsMessage);
+            }
+
+            cartTotal.textContent = cart.length+ " VND";
+        }
+
+        window.onload = function() {
+            loadCartFromLocalStorage();
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Giống Shopee</title>
+    <link rel="stylesheet"  href="btl.css">
+    <script src= "jquery-3.7.1.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <div id="header" style="padding: 0px; margin: 0px; ">
+        <div class="header1" style="height: 30px;z-index: 200; margin: 0px;  ">
+            <div class="headerfloat">
+                <ul style=" border: none;padding-inline-start: 0; margin-block-start: 6px">
+                    <li style="margin-left: 160px;" title="Kênh người bán"> Kênh người bán</li>
+                    <li title="Trở thành người bán Shopee"> Trở thành người bán Shopee</li>
+                    <li title="Tải ứng dụng"> Tải ứng dụng</li>
+                    <li> Kết nối <a href="https://www.facebook.com/"><img height="14px", width="14px", style=" transform: translateY(-0%);" src="iconf.png" title="Kết nối Facebook"></a></li>
+                </ul>
+            </div>
+            <div class="headerrigh">
+                <ul style="border: none;padding-inline-start: 0; margin-block-start: 6px">
+                    <li style="margin-left: 160px;" > Thông Báo</li>
+                    <li> Hỗ Trợ</li>
+                    <li> Tiếng Việt</li>
+                    <li> Đăng Ký</li>
+                    <li> Đăng Nhập</li>
+                </ul>
+            </div>
+        </div>
+        <div id="header2" >
+            <div class="icon">
+                <p>Shopee</p>
+            </div>
+            <div class="find">
+                <img src="anh.png" class="search-icon" alt="Search Icon">
+                <input type="text" class="search-input" placeholder=""><br>
+                <ul>
+                    <li>Dép 0d</li>
+                    <li> Săn iPhone 14 Pro Max 1k</li>
+                    <li> Lovito</li>
+                    <li> Tai Nghe BlueTooth</li>
+                    <li> Điện Thoại 1K</li>
+                    <li> Áo Thun Local Brand</li>
+                    <li> Son</li>
+                    <li> Tủ Quần Áo</li>
+                    <li> Chiếu Điều Hòa</li>
+                </ul>
+            </div>
+            <div class="gio">
+                <img width="35px", height="35px" src="giohang.png" alt="Cart" class="cart-icon" onclick="toggleCart()">
+                <div class="cart" id="cart">
+                    <h2>Giỏ hàng</h2>
+                    <ul id="cart-items">
+                        <!-- Items will be added here dynamically -->
+                    </ul>
+                    <p class="cart-total"><span id="cart-total">0</span>Sp đã thêm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="main1">
+            <div class="slide-show">
+                <div class="slider">
+                    <img class="slider-image" src="anh1.jpg" alt="Image 1">
+                    <img class="slider-image" src="anh2.jpg" alt="Image 2">
+                    <img class="slider-image" src="anh3.jpg" alt="Image 3">
+                    <img class="slider-image" src="anh4.jpg" alt="Image 3">
+                    <img class="slider-image" src="anh5.jpg" alt="Image 3">
+                    <img class="slider-image" src="anh6.jpg" alt="Image 3">
+                    <img class="slider-image" src="anh7.jpg" alt="Image 3">
+                    <img class="slider-image" src="anh8.jpg" alt="Image 3">
+                    <button id="back-button" class="control-button">&lt;</button>
+                    <button id="next-button" class="control-button">&gt;</button>
+            
+                </div>
+                <div class="slide">
+                    <img width="100%" height="98px" src="anh6.jpg" >
+                    <img width="100%" height="98px" src="anh7.jpg">
+                </div>
+            </div>
+            <div class="slide-next">
+               <ul>
+                <li> 
+                    <div class="title1">
+                    <img src="slide1.png" width="60px",height="60px">
+                    <p style="margin-block-start: 3px;"> voucher</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="title2">
+                        <img height="60px", width="60px", style="margin-left: 5px;" src="slide2.png" alt="">
+                        <p style="margin-block-start: 3px;" >Miễn phí ship</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="title3">
+                        <img height="60px", width="60px",style="margin-left: 5px;"  src="slide3.png" alt="">
+                        <p style="margin-block-start: 3px;" >Mã Giảm Giá</p>
+                    </dv>
+                </li>
+                <li>
+                    <div class="title4">
+                        <img height="60px", width="60px", src="slide4.png" alt="">
+                        <p style="margin-block-start: 3px;" >Shopee</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="title5">
+                        <img height="60px", width="60px",style="margin-left: 5px;" src="slide5.png" alt="">
+                        <p style="margin-block-start: 3px;" >Shopee Style</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="title6">
+                        <img height="60px", width="60px",style="margin-left: 5px;" src="slide6.png" alt="">
+                        <p style="margin-block-start: 3px;" >Hàng Quốc Tế</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="title7">
+                        <img height="60px", width="60px",style="margin-left: 10px;" src="slide8.png" alt="">
+                        <p style="margin-block-start: 3px;" >Nạp Thẻ, Dịch Vụ</p>
+                    </div>
+                </li>
+               </ul>
+                
+            </div>
+        </div>
+        <div id="main2">
+            <div class="td1">
+                <p>DANH MỤC</p>
+            </div>
+            <div class="td2">
+                <ul class="product">
+                    <li class="product1">
+                        <img  src="img1.png">
+                        <p>Thiết Bị Điện Gia Dụng</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img2.png">
+                        <p>Máy Ảnh & Máy Quay Phim</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img3.png">
+                        <p>Máy tính & Laptop</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img4.png">
+                        <p>Thiết Bị Điện Tử</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img5.png">
+                        <p>Thời Trang Nam</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img6.png">
+                        <p>Giày Dép Nam</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img7.png">
+                        <p>Đồng Hồ</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img8.png">
+                        <p>Điện Thoại &  Phụ Kiện</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img9.png">
+                        <p>Thể Thao & Du Lịch</p>
+                    </li>
+                </ul>
+                <ul class="product-1">
+                    <li class="product1">
+                        <img  src="img10.png">
+                        <p>Thiết Bị Điện Gia Dụng</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img11.png">
+                        <p>Máy Ảnh & Máy Quay Phim</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img12.png">
+                        <p>Máy tính & Laptop</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img13.png">
+                        <p>Thiết Bị Điện Tử</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img14.png">
+                        <p>Thời Trang Nam</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img15.png">
+                        <p>Giày Dép Nam</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img16.png">
+                        <p>Đồng Hồ</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img17.png">
+                        <p>Điện Thoại &  Phụ Kiện</p>
+                    </li>
+                    <li class="product1">
+                        <img src="img18.png">
+                        <p>Thể Thao & Du Lịch</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main3">
+            <div class="main3-1">
+                <p><b>PLASH</b> SALE</p>
+            </div>
+            <div class="main3-2">
+                <ul class="produc">
+                   <li class="produc1">
+                    <img src="img19.jpg">
+                    <h3>đ123.500</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar-1"></div>
+                        <span class="progress-text" id="progress-text">ĐÃ BÁN 36</span>
+                    </div> 
+                   </li>
+                   <li class="produc2">
+                    <img src="img20.jpg" alt="">
+                    <h3>đ223.500</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar-2"></div>
+                        <span class="progress-text" id="progress-text">ĐANG BÁN CHẠY</span>
+                    </div> 
+                   </li>
+                   <li class="produc3">
+                    <img src="img21.jpg" alt="">
+                    <h3>đ23.500</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar-3"></div>
+                        <span class="progress-text" id="progress-text">ĐANG BÁN CHẠY</span>
+                    </div>                
+                   </li>
+                   <li class="produc4">
+                    <img src="img22.jpg" alt="">
+                    <h3>đ223.500</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar-4"></div>
+                        <span class="progress-text" id="progress-text">ĐANG BÁN CHẠY</span>
+                    </div> 
+                   </li>
+                   <li class="produc5">
+                    <img src="img23.jpg" alt="">
+                    <h3>đ223.500</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar-5"></div>
+                        <span class="progress-text" id="progress-text">ĐANG BÁN CHẠY</span>
+                    </div> 
+                   </li>
+                   <li class="produc6">
+                    <img src="img24.jpg" alt="">
+                    <h3>đ323.500</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar-6"></div>
+                        <span class="progress-text" id="progress-text">ĐANG BÁN CHẠY</span>
+                    </div> 
+                   </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div id="main5">
+            <div class="main5-1">
+                <ul class="project">
+                    <li class="project1">
+                        <div class="product">
+                            <a href="product1.html?id=1">
+                                <img style="transform: translateX(0%);" src="project1.jpg">
+                                <ul>
+                                    <li><p style="color: black;">Giày Nike_AF1 Lông Chuột, Giày Thể Thao AF1 Màu Lông Chuột Bản Trung Da Lộn Đế Air Kiểu Dáng BaSic</p></li>
+                                    <li><p style="color: black;"> 1.000.000đ</p></li>
+            
+                            </a>
+                        </div>
+                    </li>
+                    <li class="project1" >
+                        <div class="product" onclick="viewProductDetails()">
+                            <a href="product2.html?id=2">
+                                <img style="transform: translateX(0%);" src="project2.jpg">
+                        <ul>
+                            <li><p style="color: black;">Tai Nghe Chụp Tai Headphone Bluetooth Không Dây M6 Tai Nghe Chụp Gaming Sạc Nhanh Chống Ồn Gấp Gọn</p></li>
+                            <li><p style="color: black;"> 175.000đ</p></li>
+                        </ul>
+
+                            </a>
+                        </div>
+                    </li>
+                    <li class="project1" >
+                        <div class="product">
+                            <a href="product3.html?id=3">
+                                <img style="transform: translateX(0%);" src="project3.jpg">
+                        <ul>
+                            <li><p style="color: black;">Đèn LED Điều Khiển Âm Thanh RGB Đèn Pickup Âm Nhạc Nhịp Điệu Không Khí Cho Ô Tô, PC, Chơi Game, Trang Trí Máy Tính Để Bàn Đèn Ngủ LED</p></li>
+                            <li><p style="color: black;"> 69.000đ</p></li>
+                        </ul>
+
+                            </a>
+                        </div>
+                    </li>
+                    <li class="project1" >
+                        <img src="project4.jpg">
+                        <ul>
+                            <li><p>Ly Giữ Nhiệt Iced Americano Inox 304 Đúc Liền Khối Cao Cấp Có Nắp Đậy Tặng Kèm Ống Hút Hàng Loại 1</p></li>
+                            <li><p> 33.000đ</p></li>
+                        </ul>
+                    </li>
+                    <li class="project1" >
+                        <img src="project5.jpg">
+                        <ul>
+                            <li><p>Tượng Trang Trí Phòng Khách Decor Bàn Làm Việc Văn Phòng Đồ Deco Sáng Tạo Hiện Đại Đồ Trang Trí Phòng Ngủ Đồ Trang Trí Nhà Cửa</p></li>
+                            <li><p> 289.000đ</p></li>
+                        </ul>
+                    </li>
+                    <li class="project1" >
+                        <img src="project6.jpg">
+                        <ul>
+                            <li><p>Cáp Sạc Nhanh , Dây Sạc Tự Ngắt Bọc Dù 100W Tích Hợp 3 Cổng Micro Usb Type C 3 In 1</p></li>
+                            <li><p> 15.000đ</p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="main5-1">
+               <ul class="project">
+                <li class="project1"  >
+                    <img src="project7.jpg">
+                    <ul>
+                        <li><p>( Giá tốt ) Mô hình Luffy nika kaido zoro nami Robin Franly Brook siêu hot</p></li>
+                        <li><p> 69.000đ</p></li>
+                    </ul>
+                </li>
+                <li class="project1" >
+                    <img src="project8.jpg">
+                    <ul>
+                        <li><p>Tai nghe giảm tiếng ồn Bluetooth 5.2 không dâyTWS Tai nghe thể thao Tai nghe chơi game âm thanh nổi HiFi</p></li>
+                        <li><p> 50.000đ</p></li>
+                    </ul>
+                </li>
+                <li class="project1" >
+                    <img src="project9.jpg">
+                    <ul>
+                        <li><p>Ngôi Sao Đèn Máy Chiếu Usb Chạy Bằng Nhiều Màu Sắc Xoay Bóng Ma Thuật Đèn Khí Quyển Ô Tô KTV Thanh Disco DJ Đảng Đèn Sân Khấu</p></li>
+                        <li><p> 44.000đ</p></li>
+                    </ul>
+                </li>
+                <li class="project1" >
+                    <img src="project10.jpg">
+                    <ul>
+                        <li><p>Nước hoa 9pm Afnan EDP 5ml/ 10ml/ 20ml HD perfume nam tính hấp dẫn tinh tế thơm lâu</p></li>
+                        <li><p> 60.000đ</p></li>
+                    </ul>
+                </li>
+                <li class="project1" >
+                    <img src="project11.jpg">
+                    <ul>
+                        <li><p>Tulip stereo Rubik Cube gương đèn ngủ thủ công DIY hoa hồng chất liệu lãng mạn quà sinh nhật</p></li>
+                        <li><p> 19.000đ</p></li>
+                    </ul>
+                </li>
+                <li class="project1" >
+                    <img src="project12.jpg">
+                    <ul>
+                        <li><p>[MẪU MỚI]Máy ảnh mini chụp ảnh dễ dàng mang theo máy ảnh kỹ thuật số máy quay mini 4K zoom bàn chải đánh răng điện</p></li>
+                        <li><p> 88.888đ</p></li>
+                    </ul>
+                </li>
+               </ul>
+            </div>
+            <div class="main5-1">
+                <ul class="project">
+                    <li class="project1" style="margin-left: 0px;" >
+                        <img src="img19.jpg">
+                        <ul>
+                            <li><p>Kem đánh răng Darlie hộp 2 tuýp kem đánh răng ông tây đen Darlie bạc hà Thái Lan (150gx2)</p></li>
+                            <li><p> 100.000đ</p></li>
+                        </ul>
+                    </li>
+                    <li class="project1" >
+                        <img src="img20.jpg">
+                        <ul>
+                            <li><p>Son Kem 3CE Cho Viền Môi Mờ Ảo Không Lem Khi Đeo Khẩu Trang 3CE Blur Water Tint 4.6g | Official Store Transferproof Lip Make up Cosmetic</p></li>
+                            <li><p> 149.000đ</p></li>
+                        </ul>
+                    </li>
+                    <li class="project1" >
+                        <img src="img21.jpg">
+                        <ul>
+                            <li><p>HỘP 12 CHIẾC BÚT BI BẤM XOÁ ĐƯỢC TIỆN LỢI CHO BÉ CẤP 1 MỚI TẬP VIẾT</p></li>
+                            <li><p> 49.000đ</p></li>
+                        </ul>
+                    </li>
+                    <li class="project1" >
+                        <img src="img22.jpg">
+                        <ul>
+                            <li><p>Combo 3 túi nước rửa chén bát đậm đặc Daiwa 500ml - Không mùi, an toàn, diệt khuẩn</p></li>
+                            <li><p> 159.000đ</p></li>
+                        </ul>
+                    </li>
+                    <li class="project1" >
+                        <img src="img23.jpg">
+                        <ul>
+                            <li><p>Nước giặt dạng túi BOOSTER 3.7 Kg</p></li>
+                            <li><p> 109.000đ</p></li>
+                        </ul>
+                    </li>
+                    <li class="project1" >
+                        <img src="img24.jpg">
+                        <ul>
+                            <li><p>Sữa Rửa Mặt Simple Gel Kind To Skin Refreshing Facial Wash Gel 150ml Anh Quốc - NEDIA COMESTIC – PHÂN PHỐI CHÍNH THỨC</p></li>
+                            <li><p> 69.000đ</p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <diV id="footer">
+            <div class="footer1">
+                <hr style="border: 3px solid rgb(253,96,50); margin-top: 60px;">
+            </div>
+            <div class="footer2">
+                <h4>SHOPEE - GÌ CŨNG CÓ, MUA HẾT Ở SHOPPE</h4>
+                <P>Shopee - ứng dụng mua sắm trực tuyến thú vị, tin cậy, an toàn và miễn phí! Shopee là nền tảng giao dịch trực tuyến hàng đầu ở Đông Nam Á, có trụ sở chính ở Singapore, Malaysia
+                    Indonesia, Thái Lan, Philippines, Đài Loan, Brazil, Mexico & Colombia. Với sự đảm bảo của Shopee, bạn sẽ mua hàng trực tuyến an tâm và nhanh chóng hơn bao giờ hết!
+                </P>
+            </div>
+        </diV>
+    </div> 
+    <script src="btl.js"></script>
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function showImage(element) {
+            var largeImage = document.getElementById("large-image");
+            largeImage.src = element.src;
+        }
+
+        function toggleCart() {
+            var cartDiv = document.getElementById("cart");
+            cartDiv.style.display = cartDiv.style.display === "block" ? "none" : "block";
+        }
+
+        function changeQuantity(amount) {
+            var quantityInput = document.getElementById("quantity");
+            var currentQuantity = parseInt(quantityInput.value);
+            var newQuantity = currentQuantity + amount;
+            if (newQuantity >= 1) {
+                quantityInput.value = newQuantity;
+            }
+        }
+
+        function addToCart(productName, productPrice) {
+            var quantityInput = document.getElementById("quantity");
+            var quantity = parseInt(quantityInput.value);
+
+            var maxLength = 20;
+            if (productName.length > maxLength) {
+                productName = productName.substring(0, maxLength) + '...';
+            }
+
+            var cartItem = {
+                name: productName,
+                price: productPrice,
+                quantity: quantity
+            };
+
+            cart.push(cartItem);
+            total += productPrice * quantity;
+
+            saveCartToLocalStorage();
+            renderCart();
+        }
+
+        function removeFromCart(index) {
+            total -= cart[index].price * cart[index].quantity;
+            cart.splice(index, 1);
+
+            saveCartToLocalStorage();
+            renderCart();
+        }
+
+        function saveCartToLocalStorage() {
+            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("total", total);
+        }
+
+        function loadCartFromLocalStorage() {
+            var savedCart = localStorage.getItem("cart");
+            var savedTotal = localStorage.getItem("total");
+
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+            }
+
+            if (savedTotal) {
+                total = parseInt(savedTotal);
+            }
+
+            renderCart();
+        }
+
+        function renderCart() {
+            var cartItems = document.getElementById("cart-items");
+            var cartTotal = document.getElementById("cart-total");
+
+            cartItems.innerHTML = "";
+
+            // Giới hạn số sản phẩm hiển thị
+            var maxItemsToShow = 5; // Số sản phẩm tối đa hiển thị
+            for (var i = 0; i < cart.length && i < maxItemsToShow; i++) {
+                var item = cart[i];
+                var newItem = document.createElement("li");
+                newItem.innerHTML = `${item.name} x ${item.quantity} - ${item.price * item.quantity} VND <button class="remove-btn" onclick="removeFromCart(${i})">Xóa</button>`;
+                cartItems.appendChild(newItem);
+            }
+
+            if (cart.length > maxItemsToShow) {
+                var hiddenItemCount = cart.length - maxItemsToShow;
+                var hiddenItemsMessage = document.createElement("li");
+               
+                cartItems.appendChild(hiddenItemsMessage);
+            }
+
+            cartTotal.textContent = cart.length;
+        }
+
+        window.onload = function() {
+            loadCartFromLocalStorage();
+        };
+    function viewProductDetails() {
+    if (localStorage.getItem('loggedIn') !== 'true') {
+        // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
+        window.location.href = 'dangnhap.html';
+    } else {
+        // Nếu đã đăng nhập, chuyển hướng đến trang chi tiết sản phẩm
+        window.location.href = 'chitietsanpham.html'; // Thay bằng URL của trang chi tiết sản phẩm thực tế
+    }
+}
+    </script>
+</body>
+</html>
